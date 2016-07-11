@@ -38,8 +38,8 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
-        'urlManager' => [
+        
+       /* 'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
@@ -58,9 +58,13 @@ if (YII_ENV_DEV) {
     ];
 
     $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
+   $config['modules']['gii'] =
+    [
         'class' => 'yii\gii\Module',
+		'allowedIPs' => ['10.0.2.*']
     ];
+  
 }
+
 
 return $config;
